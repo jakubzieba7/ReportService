@@ -6,9 +6,9 @@ using System.Net.Mime;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using ReportService.Extensions;
+using EmailSender.Extensions;
 
-namespace ReportService.Models
+namespace EmailSender
 {
     public class Email
     {
