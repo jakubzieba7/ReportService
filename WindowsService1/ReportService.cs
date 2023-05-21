@@ -1,5 +1,5 @@
 ﻿using EmailSender;
-using ReportService.Models;
+using ReportService.Core;
 using ReportService.Repositories;
 using System;
 using System.Collections.Generic;

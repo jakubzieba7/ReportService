@@ -51,10 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Domains\Error.cs" />
-    <Compile Include="Models\Domains\Report.cs" />
-    <Compile Include="Models\Domains\ReportPosition.cs" />
-    <Compile Include="Models\GenerateHtmlEmail.cs" />
     <Compile Include="ProjectInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -91,6 +87,10 @@
     <ProjectReference Include="..\EmailSender\EmailSender.csproj">
       <Project>{A942F49A-AE8E-4B0F-BBBE-44A2800FB297}</Project>
       <Name>EmailSender</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportService.Core\ReportService.Core.csproj">
+      <Project>{F763D477-BBF3-487B-BAE7-900B9E74F6E7}</Project>
+      <Name>ReportService.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿using ReportService.Models.Domains;
+﻿using ReportService.Core.Domains;
 using System;
 using System.Collections.Generic;
 using System.Linq;

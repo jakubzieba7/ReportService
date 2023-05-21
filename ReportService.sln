@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService", "WindowsSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSender", "EmailSender\EmailSender.csproj", "{A942F49A-AE8E-4B0F-BBBE-44A2800FB297}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService.Core", "ReportService.Core\ReportService.Core.csproj", "{F763D477-BBF3-487B-BAE7-900B9E74F6E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A942F49A-AE8E-4B0F-BBBE-44A2800FB297}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A942F49A-AE8E-4B0F-BBBE-44A2800FB297}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A942F49A-AE8E-4B0F-BBBE-44A2800FB297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F763D477-BBF3-487B-BAE7-900B9E74F6E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F763D477-BBF3-487B-BAE7-900B9E74F6E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F763D477-BBF3-487B-BAE7-900B9E74F6E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F763D477-BBF3-487B-BAE7-900B9E74F6E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
