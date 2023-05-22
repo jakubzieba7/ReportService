@@ -25,22 +25,31 @@ namespace ReportService
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         private Email _email;
         private GenerateHtmlEmail _htmlEmail = new GenerateHtmlEmail();
-        private string _emailReceiver = "jakubzieba7@gmail.com";
+        private string _emailReceiver;
 
         public ReportService()
         {
             InitializeComponent();
 
-
-            _email = new Email(new EmailParams
+            try
             {
-                HostSmtp = "smtp.gmail.com",
-                Port = 587,
-                EnableSsl = true,
-                SenderName = "Jakub Zięba",
-                SenderEmail = "services.report.new@gmail.com",
-                SenderEmailPassword = ""
-            });
+                _emailReceiver = ConfigurationManager.AppSettings["ReceiverEmail"];
+
+                _email = new Email(new EmailParams
+                {
+                    HostSmtp = ConfigurationManager.AppSettings["HostSmtp"],
+                    Port = Convert.ToInt32(ConfigurationManager.AppSettings["Port"]),
+                    EnableSsl = Convert.ToBoolean(ConfigurationManager.AppSettings["EnableSsl"]),
+                    SenderName = ConfigurationManager.AppSettings["SenderName"],
+                    SenderEmail = ConfigurationManager.AppSettings["SenderEmail"],
+                    SenderEmailPassword = ConfigurationManager.AppSettings["SenderEmailPassword"]
+                });
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex, ex.Message);
+                throw new Exception(ex.Message);
+            }
         }
 
         protected override void OnStart(string[] args)
