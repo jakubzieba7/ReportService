@@ -1,6 +1,7 @@
 ﻿using EmailSender;
 using ReportService.Core.Domains;
 using ReportService.Core;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ReportService.ConsoleApp
 {
@@ -8,9 +9,11 @@ namespace ReportService.ConsoleApp
     {
         static void Main(string[] args)
         {
+            return;
+
             var emailReceiver = "jakubzieba7@gmail.com";
 
-        var htmlEmail = new GenerateHtmlEmail();
+            var htmlEmail = new GenerateHtmlEmail();
 
             var email = new Email(new EmailParams
             {
